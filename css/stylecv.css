@@ -1,0 +1,324 @@
+body{
+    font-family:  Segoe UI, Helvetica, sans-serif;
+    color: white;
+    background-color: #F2F2F2;
+}
+#container{
+    width: 65%;
+    margin: 0 auto;
+    
+    
+}
+
+#header{
+    height: 178px;
+    background-image: url("../images/solliciteren.png");
+    
+}
+#nav{
+    float: left;
+    width: 26%;
+    height: 100%;
+    background-color: #79B4D9;
+    opacity: 0.8;
+}
+#navgroup{
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    /* https://stackoverflow.com/questions/396145/how-can-i-vertically-center-a-div-element-for-all-browsers-using-css*/
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#navgroup img{
+    width: 27px;
+    float: left;
+    margin-top: 3px;
+}
+h1{
+    float: left;
+    font-size: 28px;
+    margin-left: 10px;
+}
+.navItem{
+    width: 100%;
+    height: 120px;
+    text-align: center;
+    font-size: 28px;
+    background-color: cadetblue;
+    display: none;
+    margin: 0;
+}
+.navItem p, #foot p{
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+#navgroup:after, #bodycontainer:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.iconen{
+    float: left;
+    width: 40px;
+    position: relative;
+    top: 50%;
+    right: -10%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: none;
+}
+
+#bodycontainer{
+    background-color: #3B668C;
+    height: 97%;
+    color: black;
+}
+#left{
+    height: 100%;
+    width: 26%;
+    float: left;
+    background-image: url("../images/textuur.png");
+
+}
+#right{
+    width: 74%;
+    float: right;
+    background-color: #BDDEF2;   
+    height: 100%;
+}
+h2{
+    
+    font-size: 24pt;
+    margin-top: 30px;
+    text-align: center;
+}
+#contentarea{
+    margin-top: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color:  #BDDEF2;  
+    font-size: 14px;
+}
+#pfoto{
+    height: 270px;
+    width: 39%;
+    background-color: black;
+    border-bottom-right-radius: 15px;
+    float:left;
+    background-image: url("../images/pfoto.jpg");
+    background-size: 110%;
+}
+#pfoto img{
+    height: 250px;
+    border-bottom-right-radius: 15px;
+}
+#beninfo{
+
+    width: 59%;
+    height: 270px;
+    background-color: #3B668C;
+    float: right;
+    color: white;
+    border-bottom-left-radius: 15px;
+}
+#beninfo p, #talen p, #opleidingen p, #itkennis p{
+    margin-left: 25px;
+    margin-top: 12px;
+}
+h3{
+    margin-left: 25px;
+    margin-top: 25px;
+    font-size: 20px;
+    display: inline-block;
+    
+}
+#rij2{
+    clear: both;
+}
+#talen{
+   
+    height: 200px;
+    width: 39%;
+    background-color: #79B4D9;
+    margin-top: 15px;
+    border-top-right-radius: 15px;
+    float: left;
+}
+#talen img{
+    height: 18px;
+    margin-right: 6px;
+}
+#taal{
+    width: 49%;
+    height: 100%;
+    float: left;
+}
+#circles{
+    width: 49%;
+    height: 100%;
+    float: right;
+
+}
+
+.circlestaal{
+    width: 91px;
+    height: 15px;
+    margin-top: 16px;
+    background-color: #3B668C;
+    border-radius: 15px;
+}
+
+.dots {
+    margin-top: 2px;
+    margin-left: 3px;
+    height: 11px;
+    width: 11px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+}
+#opleidingen{
+   
+    height: 200px;
+    width: 59%;
+    background-color: #79B4D9;
+    margin-top: 15px;
+    border-top-left-radius: 15px;
+    float: right;
+}
+#opleidingen img, #itkennis img{
+    height: 18px;
+    margin-right: 6px;
+}
+#itkennis{
+    background-color: #3B668C;
+    margin-top: 15px;
+    width: 49%;
+    height: 200px;
+    float: left;
+    color: white;
+}
+#itkennisfotos{
+    margin-top: 15px;
+    width: 49%;
+    height: 200px;
+    background: #79B4D9;
+    float: right;
+}
+#itkennisfotos img{
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+}
+#hobbies1{
+    background-color: #88A0B5;
+    height: 200px;
+    width: 50%;
+    margin-top: 15px;
+    float: left;
+    color: white;
+
+}
+#interessestext{
+    display: block;
+}
+#hobbies2{
+    background-color: #88A0B5;
+    color: white;
+    height: 200px;
+    width: 50%;
+    margin-top: 15px;
+    float: right;
+}
+.text{
+    width: 39%;
+    float: left;
+}
+#hobbies1 p, #hobbies2 p{
+    margin-top: 19px;
+    margin-left: 25px;
+}
+.snippet{
+    width: 59%;
+    float: right;
+    margin-top: 6px;
+ 
+}
+.snippet div{
+    width: 170px;
+    height: 24px;
+    border-radius: 15px;
+    background-color: black;
+    margin-top: 10px;
+}
+#snippetselect2{
+    margin-top: 47px;
+}
+#text2 {
+    margin-top: 44px;
+}
+#snippet1{
+    background-image: url("../images/webdesign.png");
+    background-position: center;
+}
+#snippet2{
+    background-image: url("../images/architectuur.png");
+    background-position: center;
+}
+#snippet3{
+    background-image: url("../images/technologie.png");
+    background-position: center;
+}
+#snippet4{
+    background-image: url("../images/industrie.png");
+    background-position: center;
+    background-position-y: -17px;
+}
+#snippet5{
+    background-image: url("../images/muziek.png");
+    background-position: center;
+}
+#snippet6{
+    background-image: url("../images/natuur.png");
+    background-position: center;
+}
+#snippet7{
+    background-image: url("../images/games.png");
+    background-position: center;
+}
+
+#foot{
+    background-color: #79B4D9;
+    height: 25px;
+    text-align: center;
+    font-size: 13px;
+}
+
+#left:after,#right:after, #navgroup:after, #rij1:after, #bodycontainer:after,#contentarea:after, #rij1:after, #rij2:after, #rij3:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+@media only screen and (min-width: 1920px) {
+    #container{
+        width: 48%;
+    }
+}

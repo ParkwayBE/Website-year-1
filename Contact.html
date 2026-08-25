@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/stylecontact.css">
+    <script src="jquery/jquery_development.js"></script>
+    
+    <script>
+        function controle(){
+            var fn = document.getElementById("Fname").value;
+            var ln = document.getElementById("Lname").value;
+            var mail = document.getElementById("mailtextadd").value;
+            var mailbody = document.getElementById("mailbody").value;
+            var message = document.getElementById("failmessage");
+            if(fn != "" && ln != "" && mail != "" && mailbody != "")
+            {
+                message.style.display = "none";
+                return true;
+            }
+            else{
+                message.style.display = "inline-block";
+                return false;
+            }
+        }
+        function showNav(){
+            document.getElementById("navpart1").style.display = "inline-block";
+            document.getElementById("navpart2").style.display = "inline-block";
+            document.getElementById("navpart3").style.display = "inline-block";
+            document.getElementById("left").style.cursor = "pointer";
+        }
+        function hideNav(){
+            document.getElementById("navpart1").style.display = "none";
+            document.getElementById("navpart2").style.display = "none";
+            document.getElementById("navpart3").style.display = "none";
+            document.getElementById("left").style.cursor = "auto";
+        }
+        $(document).ready(function(){
+            $("#navpart1").mouseover(function(){
+                ///$("#icon1").css("display","block");
+                $("#icon1").fadeIn("fast");
+            });
+            $("#navpart1").mouseleave(function(){
+                //$("#icon1").css("display", "none");
+                $("#icon1").fadeOut("fast");
+            });
+
+            $("#navpart2").mouseover(function(){
+                $("#icon2").fadeIn("fast");
+            });
+            $("#navpart2").mouseleave(function(){
+                $("#icon2").fadeOut("fast");
+            });
+
+            $("#navpart3").mouseover(function(){
+                $("#icon3").fadeIn("fast");
+            });
+            $("#navpart3").mouseleave(function(){
+                $("#icon3").fadeOut("fast");
+            });
+        });
+    </script>
+    <title>Contact</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="nav" onmouseover="showNav();" onmouseleave="hideNav();">
+                <div id="navgroup">
+                    <img src="images/3streep.png" alt="3streep">
+                    <h1>MENU</h1>
+                </div>
+            </div>
+            <div id="birdsbox">
+                
+            </div>
+        </div>
+        <div id="bodycontainer">
+            <div id="left"  onmouseleave="hideNav();">
+                <a href="index.html"><div class="navItem" id="navpart1" onmouseover="showNav();"><img class='iconen' id="icon1" src="images/iconoplijsten.png" alt="icon"><p>Home</p></div></a>
+                <a href="project.html"><div class="navItem" id="navpart2" onmouseover="showNav();"><img class='iconen' id="icon2" src="images/iconoplijsten.png" alt="icon"><p>Project</p></div></a>
+                <a href="cv.html"><div class="navItem" id="navpart3" onmouseover="showNav();"><img class='iconen' id="icon3" src="images/iconoplijsten.png" alt="icon"><p>CV</p></div></a>
+            </div>
+            <div id="right">
+                <div id="contentarea">
+                    <h2>Contact</h2>
+                    <h3>Mijn contact gegevens:</h3>
+                    <p id="gegevens1"><img src="images/mail.png" alt="mail">Mail: vandammeben@outlook.com</p>
+                    <p id="gegevens2"><img src="images/phone-call.png" alt="phone">Telefoon: 04748565481</p>
+                    <h3>Formulier:</h3>
+                    <div id="formcontainer">
+                        
+                        <form  method="post" action="mailto:vandammeben@outlook.com" enctype="text/plain" onsubmit="return controle()">
+                            <div id="firstrow">
+                                <div id="fnamebox">
+                                    <div id="firstnamelabel">
+                                        <label for="Fname">Voornaam:</label>
+                                    </div>
+                                    <div id="firstnametext">
+                                        <input type="text" id="Fname" name="firstname">
+                                    </div>
+                                </div>
+                                <div id="lnamebox">
+                                    <div id="lastnamelabel">
+                                        <label for="Lname">Achternaam:</label>
+                                    </div>
+                                    <div id="lastnametext">
+                                        <input type="text" id="Lname" name="lastname">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="secondrow">
+                                <div id="mailbox">
+                                    <div id="maillabel">
+                                        <label for="mailtextadd">Email adres:</label>
+                                    </div>
+                                    <div id="mailtext">
+                                        <input type="text" id="mailtextadd" name="mailadd">
+                                    </div>
+                                
+                                    
+                                </div>
+                                <div id="subjectbox">
+                                    <div id="subjectlabel">
+                                        <label for="subjectfield">Onderwerp:</label>
+                                    </div>
+                                    <div id="subjecttext">
+                                        <input type="text" name="subject" id="subjectfield">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="thirdrow">
+                                <div id="mailbodylabel">
+                                    <label for="mailbody">Mail:</label>
+                                </div>
+                                <textarea name="themailbody" id="mailbody" rows="10"></textarea>
+                            </div>
+                            <div id="forthrow">
+                                <input type="submit" value="Verzenden" id="verzend">
+                                <input type="reset" value="Reset" id="reset">
+                                <p id="failmessage">Vul alle velden in aub!</p>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="foot">
+            <p>Copyright &copy; Thomas More Mechelen-Antwerpen vzw - Campus De Nayer - Professionele bachelor elektronica-ict – 2022</p>
+        </div>
+    </div>
+</body>
+</html>

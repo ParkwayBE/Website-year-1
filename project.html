@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styleproject.css">
+    <script src="jquery/jquery_development.js"></script>
+    <script>
+        var counter = 1;
+        var imagescount = 1;
+        var show = ["images/descriptie.PNG", "images/designOmhulsel.png" , "images/houtehuisje.jpg", "images/testbench.jpg"]
+        function showNav(){
+            document.getElementById("navpart1").style.display = "inline-block";
+            document.getElementById("navpart2").style.display = "inline-block";
+            document.getElementById("navpart3").style.display = "inline-block";
+            document.getElementById("left").style.cursor = "pointer";
+        }
+        function hideNav(){
+            document.getElementById("navpart1").style.display = "none";
+            document.getElementById("navpart2").style.display = "none";
+            document.getElementById("navpart3").style.display = "none";
+            document.getElementById("left").style.cursor = "auto";
+        }
+        $(document).ready(function(){
+            $("#verder").click(function(){
+                $("#subject"+counter).fadeOut("slow");
+                $("#uitleg"+counter).fadeOut("slow");
+                
+                $("#slide").fadeOut("slow", function() {
+                    $("#slide").attr("src", show[imagescount]);
+                    imagescount++;
+                    if (imagescount == 4)
+                    {
+                        imagescount = 0;
+                    }
+                    $("#subject"+counter).css("display", "none");
+                    $("#uitleg"+counter).css("display", "none");
+                    $("#slide").fadeIn("slow");
+                    counter++;
+                    if (counter == 5)
+                    {
+                        counter = 1;
+                    } 
+                    
+                    $("#uitleg"+counter).css("display", "inline-block");
+                    $("#subject"+counter).css("display", "inline-block");
+                    $("#subject"+counter).fadeIn("slow");
+                    
+                    
+                    $("#uitleg"+counter).fadeIn("slow");
+                    
+                    
+
+                });
+                });
+            
+           $("#verder").mouseenter(function(){
+                $("#verder").animate({width:'50%'});
+           });
+           $("#verder").mouseleave(function(){
+                $("#verder").animate({width:'15%'});
+           });
+            
+        });
+
+        $(document).ready(function(){
+            $("#navpart1").mouseover(function(){
+                ///$("#icon1").css("display","block");
+                $("#icon1").fadeIn("fast");
+            });
+            $("#navpart1").mouseleave(function(){
+                //$("#icon1").css("display", "none");
+                $("#icon1").fadeOut("fast");
+            });
+
+            $("#navpart2").mouseover(function(){
+                $("#icon2").fadeIn("fast");
+            });
+            $("#navpart2").mouseleave(function(){
+                $("#icon2").fadeOut("fast");
+            });
+
+            $("#navpart3").mouseover(function(){
+                $("#icon3").fadeIn("fast");
+            });
+            $("#navpart3").mouseleave(function(){
+                $("#icon3").fadeOut("fast");
+            });
+        });
+        // https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+        function backToTop(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>   
+    <title>Project</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="nav" onmouseover="showNav();" onmouseleave="hideNav();">
+                <div id="navgroup">
+                    <img src="images/3streep.png" alt="3streep">
+                    <h1>MENU</h1>
+                </div>
+            </div>
+            
+        </div>
+        <div id="bodycontainer">
+            <div id="left"  onmouseleave="hideNav();">
+                <a href="index.html"><div class="navItem" id="navpart1" onmouseover="showNav();"><img class='iconen' id="icon1" src="images/iconoplijsten.png" alt="icon"><p>Home</p></div></a>
+                <a href="cv.html"><div class="navItem" id="navpart2" onmouseover="showNav();"><img class='iconen' id="icon2" src="images/iconoplijsten.png" alt="icon"><p>CV</p></div></a>
+                <a href="Contact.html"><div class="navItem" id="navpart3" onmouseover="showNav();"><img class='iconen' id="icon3" src="images/iconoplijsten.png" alt="icon"><p>Contact</p></div></a>
+            </div>
+            <div id="right">
+                <div id="titlegroup">
+                    <div></div>
+                    <img src="images/templogo.png" alt="logo">
+                    <h2>Project: Bird Spy Cam</h2>
+                    <div></div>
+                </div>
+
+                <div id="contentarea">
+                    <p id="introduction">Mijn naam is Ben Van Damme ik zit in mijn eerste jaar en volg de richting elektronica-ict met keuze traject application development. Mijn project gaat over een verborgen camera in de natuur die van vogels beelden maakt. Het is de bedoeling dat deze dan worden doorgestuurd naar een smartphone. Waar op we in onze eigen zelf gemaakte applicatie een gallerij van vogel beelden te zien kunnen krijgen.</p>
+                    <h3>Gallerij:</h3>
+                    
+                    <div id="verder">
+                        <p>
+                        Verder >>
+                        </p>
+                    </div>
+                    
+                    <img id="slide" src="images/descriptie.PNG" alt="descriptie">
+                    <h3 id="subject1">Omschrijving:</h3>
+                    <h3 id="subject2">Behuizing design:</h3>
+                    <h3 id="subject4">Testbench:</h3>
+                    <h3 id="subject3">Fysieke behuizing:</h3>
+                    <p id="uitleg1">We plaatsen de spycam in het wild op een subtiele plaats zodat deze niet gestolen kan worden en deze geen dieren weg jaagt. Je moet in de buurt komen om het beeld materiaal te bemachtigen.</p>
+                    <p id="uitleg2">De behuizing is eigenlijk een houte vogelhuisje met plaats voor een raspberry pi in plaats van vogels. Het is de bedoeling dat de camera naar buiten kijkt en krijgt dus hiervoor zijn aparte mount.</p>
+                    <p id="uitleg4">Deze afbeeldingen gebruikte ik om het vogel detectie systeem te testen.</p>
+                    <p id="uitleg3">Dit is het bena volledig gerealiseerde project enkel nog een dak erop en een laagje verf.</p>
+                    <h3>De Hardware:</h3>
+                    <img src="images/hardwaresetup.jpg" alt="hardwaresetup">
+                    <p class="paragrafen">De hardware bestaat uit een raspberry Pi computertje een camera module voor de raspberry pi en een powerbank verbonden met usb-c. Om configuraties uit te voeren gebruik ik een ethernet kabel om met vnc te verbinden op de laptop.</p>
+                    <h3>De eerste Test:</h3>
+                    <img src="images/test1.jpg" alt="test1">
+                    <p class="paragrafen">De eerste meer uitgebreide test bestond uit een paar afbeeldingen van verschillende voorwerpen. Er moest nog wat gecalibreerd worden voor dat hij accuraat en consistent de juiste keuze bleef maken.</p>
+                    <h3>Eerste Resultaten:</h3>
+                    <img src="images/captureresult.PNG" alt="results">
+                    <p class="paragrafen">Na wat tijd te spenderen aan het scherpstellen was het resultaat toch behoorlijk.</p>
+                    <h3>Verven:</h3>
+                    <img src="images/verven.jpg" alt="verven">
+                    <p class="paragrafen">een beetje groen verven zodat het minder opvalt in de natuur.</p>
+                    
+            
+                    <a href="" onclick="backToTop()" id="backUp">Terug naar boven? klik hier.</a>
+                </div>
+            </div>
+        </div>
+        <div id="foot">
+            <p>Copyright &copy; Thomas More Mechelen-Antwerpen vzw - Campus De Nayer - Professionele bachelor elektronica-ict – 2022</p>
+        </div>
+    </div>
+</body>
+</html>

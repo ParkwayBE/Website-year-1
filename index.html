@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styleindex.css">
+    <script src="jquery/jquery_development.js"></script>
+    <script>
+        function showNav(){
+            document.getElementById("navpart1").style.display = "inline-block";
+            document.getElementById("navpart2").style.display = "inline-block";
+            document.getElementById("navpart3").style.display = "inline-block";
+            document.getElementById("left").style.cursor = "pointer";
+        }
+        function hideNav(){
+            document.getElementById("navpart1").style.display = "none";
+            document.getElementById("navpart2").style.display = "none";
+            document.getElementById("navpart3").style.display = "none";
+            document.getElementById("left").style.cursor = "auto";
+        }
+
+        $(document).ready(function(){
+            $("#navpart1").mouseover(function(){
+                ///$("#icon1").css("display","block");
+                $("#icon1").fadeIn("fast");
+            });
+            $("#navpart1").mouseleave(function(){
+                //$("#icon1").css("display", "none");
+                $("#icon1").fadeOut("fast");
+            });
+
+            $("#navpart2").mouseover(function(){
+                $("#icon2").fadeIn("fast");
+            });
+            $("#navpart2").mouseleave(function(){
+                $("#icon2").fadeOut("fast");
+            });
+
+            $("#navpart3").mouseover(function(){
+                $("#icon3").fadeIn("fast");
+            });
+            $("#navpart3").mouseleave(function(){
+                $("#icon3").fadeOut("fast");
+            });
+        });
+    </script>
+    <title>Home</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="nav" onmouseover="showNav();" onmouseleave="hideNav();">
+                <div id="navgroup">
+                    <img src="images/3streep.png" alt="3streep">
+                    <h1>MENU</h1>
+                </div>
+            </div>
+            <div id="birdsbox">
+                
+            </div>
+        </div>
+        <div id="bodycontainer">
+            <div id="left"  onmouseleave="hideNav();">
+                <a href="project.html"><div class="navItem" id="navpart1" onmouseover="showNav();"><img class='iconen' id="icon1" src="images/iconoplijsten.png" alt="icon"><p>Project</p></div></a>
+                <a href="cv.html"><div class="navItem" id="navpart2" onmouseover="showNav();"><img class='iconen' id="icon2" src="images/iconoplijsten.png" alt="icon"><p>CV</p></div></a>
+                <a href="Contact.html"><div class="navItem" id="navpart3" onmouseover="showNav();"><img class='iconen' id="icon3" src="images/iconoplijsten.png" alt="icon"><p>Contact</p></div></a>
+            </div>
+            <div id="right">
+                <div id="laptop">
+                    <h2>Portfolio Ben Van Damme</h2>
+                </div>
+                <h3>Wie ben ik?</h3>
+                    <p>Student aan Thomas More De Nayer in Sint-Katlijne-Waver. Richting ICT. Ik ben Geintresseerd in nieuwe technologieën en technieken. Ik ben er altijd op uit om te weten te komen hoe iets werkt of in elkaar zit. Verder ben ik avontuurlijk ingesteld en ontdek graag nieuwe plaatsen en ideeën.</p>
+                <h3>Wat kan je hier vinden?</h3>
+                <p>Hier laat ik uitgebreid mijn laatste nieuwe ontwikkelingen en projecten zien. Er is ook een slideshow aanwezig. Mijn circulum vitae staat op deze website. Verder is er nog een contact pagina om mij gemakkelijk te kunnen bereiken.</p>
+            </div>
+        </div>
+        <div id="foot">
+            <p>Copyright &copy; Thomas More Mechelen-Antwerpen vzw - Campus De Nayer - Professionele bachelor elektronica-ict – 2022</p>
+        </div>
+    </div>
+</body>
+</html>

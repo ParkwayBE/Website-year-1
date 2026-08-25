@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/stylecv.css">
+    <script src="jquery/jquery_development.js"></script>
+    <script>
+        function showNav(){
+            document.getElementById("navpart1").style.display = "inline-block";
+            document.getElementById("navpart2").style.display = "inline-block";
+            document.getElementById("navpart3").style.display = "inline-block";
+            document.getElementById("left").style.cursor = "pointer";
+        }
+        function hideNav(){
+            document.getElementById("navpart1").style.display = "none";
+            document.getElementById("navpart2").style.display = "none";
+            document.getElementById("navpart3").style.display = "none";
+            document.getElementById("left").style.cursor = "auto";
+        }
+        $(document).ready(function(){
+            $("#navpart1").mouseover(function(){
+                ///$("#icon1").css("display","block");
+                $("#icon1").fadeIn("fast");
+            });
+            $("#navpart1").mouseleave(function(){
+                //$("#icon1").css("display", "none");
+                $("#icon1").fadeOut("fast");
+            });
+
+            $("#navpart2").mouseover(function(){
+                $("#icon2").fadeIn("fast");
+            });
+            $("#navpart2").mouseleave(function(){
+                $("#icon2").fadeOut("fast");
+            });
+
+            $("#navpart3").mouseover(function(){
+                $("#icon3").fadeIn("fast");
+            });
+            $("#navpart3").mouseleave(function(){
+                $("#icon3").fadeOut("fast");
+            });
+        });
+    </script>
+    <title>CV</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div id="nav" onmouseover="showNav();" onmouseleave="hideNav();">
+                <div id="navgroup">
+                    <img src="images/3streep.png" alt="3streep">
+                    <h1>MENU</h1>
+                </div>
+            </div>
+            <div id="birdsbox">
+                
+            </div>
+        </div>
+        <div id="bodycontainer">
+            <div id="left"  onmouseleave="hideNav();">
+                <a href="index.html"><div class="navItem" id="navpart1" onmouseover="showNav();"><img class='iconen' id="icon1" src="images/iconoplijsten.png" alt="icon"><p>Home</p></div></a>
+                <a href="project.html"><div class="navItem" id="navpart2" onmouseover="showNav();"><img class='iconen' id="icon2" src="images/iconoplijsten.png" alt="icon"><p>Project</p></div></a>
+                <a href="Contact.html"><div class="navItem" id="navpart3" onmouseover="showNav();"><img class='iconen' id="icon3" src="images/iconoplijsten.png" alt="icon"><p>Contact</p></div></a>
+            </div>
+            <div id="right">
+             
+            <h2>Curriculum Vitae</h2>   
+            <div id="contentarea">
+                <div id="rij1">
+                    <div id="pfoto"></div>
+                    <div id="beninfo">
+                        <h3>Ben Van Damme</h3>
+                        <p>Hertstraat 67, Sint-Katelijne-Waver</p>
+                        <p>vandammeben@outlook.com</p>
+                        <p>Belg</p>
+                        <p>Ongehuwd</p>
+                        <p>15-11-1997 Wilrijk</p>
+                    </div>
+                </div>
+                <div id="rij2">
+                    <div id="talen">
+                        <h3>Talen Kennis</h3> <br/>
+                        <div id="taal">
+                            <p><img src="images/iconoplijsten.png" alt="icon">Nederlands</p>
+                            <p><img src="images/iconoplijsten.png" alt="icon">Engels</p>
+                            <p><img src="images/iconoplijsten.png" alt="icon">Frans</p>
+                        </div>
+                        <div id="circles">
+                            <div class="circlestaal">
+                                <span class="dots"></span>
+                                <span class="dots"></span>
+                                <span class="dots"></span>
+                                <span class="dots"></span>
+                                <span class="dots"></span>
+                            </div>
+                            <div class="circlestaal">
+                                <span class="dots"></span>
+                                <span class="dots"></span>
+                                <span class="dots"></span>
+                            </div>
+                            <div class="circlestaal">
+                                <span class="dots"></span>
+                                <span class="dots"></span>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="opleidingen">
+                        <h3>Opleidingen</h3>
+                        <p><img src="images/iconoplijsten.png" alt="icon">ICT in Thomas More De nayer</p>
+                        <p><img src="images/iconoplijsten.png" alt="icon">Volwassen onderwijs Mechelen 2019-2021</p>
+                        <p><img src="images/iconoplijsten.png" alt="icon">Werken 2016-2019</p>
+                        <p><img src="images/iconoplijsten.png" alt="icon">Multimedia in TSM Mechelen 2013-2016</p>
+                 
+
+                    </div>
+                </div>
+                <div id="rij3">
+                    <div id="itkennis">
+                        <h3>IT Kennis</h3>
+                        <p><img src="images/iconoplijsten.png" alt="icon">Windows, MacOs, Linux</p>
+                        <p><img src="images/iconoplijsten.png" alt="icon">Microsoft Office, Adobe Creative Cloud</p>
+                        <p><img src="images/iconoplijsten.png" alt="icon">C, HTML, CSS, Javascript</p>
+
+                    </div>
+                    <div id="itkennisfotos">
+                        <img src="images/msoffice.png" alt="msoffice"><br/>
+                        <img src="images/adobe creative cloud.png" alt="adobeCC">
+                    </div>
+                </div>
+                <div id="rij4">
+                    <div id="hobbies1">
+                        <h3 id="interessestext">Interesses en hobbies</h3>
+                        <div class="text">
+                            <p>Webdesign</p>
+                            <p>Architectuur</p>
+                            <p>Technologie</p>
+                            <p>Industrie</p>
+                        </div>
+                        <div class="snippet">
+                            <div id="snippet1"></div>
+                            <div id="snippet2"></div>
+                            <div id="snippet3"></div>
+                            <div id="snippet4"></div>
+                        </div>
+                    </div>
+                    <div id="hobbies2">
+                        <div class="text" id="text2">
+                            <p>Muziek</p>
+                            <p>Natuur</p>
+                            <p>Games</p>
+                        </div>
+                        <div class="snippet" id="snippetselect2">
+                            <div id="snippet5"></div>
+                            <div id="snippet6"></div>
+                            <div id="snippet7"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div> 
+            
+            </div>
+        </div>
+        <div id="foot">
+            <p>Copyright &copy; Thomas More Mechelen-Antwerpen vzw - Campus De Nayer - Professionele bachelor elektronica-ict – 2022</p>
+        </div>
+    </div>
+</body>
+</html>
